@@ -1,4 +1,5 @@
-var http = require('http'),
+var cp = require('child_process'),
+    http = require('http'),
     os = require('os'),
     util = require('util');
 
@@ -16,12 +17,8 @@ http.createServer(function (req, res) {
 }).listen(port);
 
 availableCpus.forEach(function (cpu) {
-    util.log('new server for cpu', cpu);
-
     var cpuString = util.inspect(cpu, { showHidden: true, depth: null, colors: true });
+    util.log('Fork server process', cpuString);
 
-    http.createServer(function (req, res) {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end(cpuString);
-    }).listen(++ port);
+    var child = cp.fork('./child.js', [++ port]);
 });
