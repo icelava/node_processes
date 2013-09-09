@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" serviceName="gumbjornnodes" osFamily="2" osVersion="*" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
+  <Role name="WorkerMaster">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="admin" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBToiLYr2FaWQ8qO4Oj+hUowDQYJKoZIhvcNAQEBBQAEggEAbw0BUiQJnDO8ct+5d7ZTcfoMd7rs5VoIkAOHRWHcu294NiCjgAHIdIwTEO9MYUim5Agh5tMrbbPYJnQEQRkhAq1BRZfYbccPafZVtj159UTJkxvfytPP3MfOUKAm7MH+7I59m2+vav4EQ9dz+LXJYzEAiya5zSsxtewk6jFDdeG+BlW+6XCfPJ7H6J0x6JTt7Yl8DeT01jBOZ5Gs0vkff6tu3yxe1DjecUmV37DGeMqVSDvM7dkpXU5ZGAOr3q9reknTgUZg2zVAkYNQRAqPuB2RDRk8CTn4IlCPnegh9b3tyFqbs3/bC/fhG78Ui/2oeOWjA0YwjhgsdzgaevaW8TAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLt2CACtPOTngBAHVPtPTHvfLcAi9AaPFnJH" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-09-24T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Instances count="1" />
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="6E17B340286A9D470C23E7B7F1F02C4589DB16E1" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
